@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Horizon Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Grand Horizon</h1>
+                <p>Hotel & Spa</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#nearby">Nearby</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#booking" class="book-now">Book Now</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Luxury Redefined</h1>
+            <p>Experience unparalleled comfort in the heart of the city</p>
+            <a href="#booking" class="btn">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Welcome to Grand Horizon</h2>
+                <p>Established in 2005, Grand Horizon Hotel has been providing exceptional hospitality services to travelers from around the world. Our prime location, luxurious amenities, and dedicated staff ensure an unforgettable stay.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <p>Free WiFi</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-swimming-pool"></i>
+                        <p>Infinity Pool</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <p>Fine Dining</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-spa"></i>
+                        <p>Spa Services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hotel Lobby">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <h2>Our Rooms & Suites</h2>
+            <p class="section-subtitle">Choose from our variety of luxurious accommodations</p>
+            
+            <div class="room-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deluxe Room">
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious room with city view, king-size bed and modern amenities.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-ruler-combined"></i> 35 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$199/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1566669437685-5f6f6a5e1b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Executive Suite">
+                    <div class="room-info">
+                        <h3>Executive Suite</h3>
+                        <p>Luxurious suite with separate living area and premium services.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-ruler-combined"></i> 55 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$299/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1582719471381-97122e8e9c26?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Presidential Suite">
+                    <div class="room-info">
+                        <h3>Presidential Suite</h3>
+                        <p>The ultimate in luxury with panoramic views and butler service.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-ruler-combined"></i> 85 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$499/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Family Room">
+                    <div class="room-info">
+                        <h3>Family Room</h3>
+                        <p>Spacious accommodation perfect for families with children.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> 2 Queen Beds</span>
+                            <span><i class="fas fa-ruler-combined"></i> 45 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults + 2 Children</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$249/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 5 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Honeymoon Suite">
+                    <div class="room-info">
+                        <h3>Honeymoon Suite</h3>
+                        <p>Romantic getaway with special amenities for couples.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-ruler-combined"></i> 50 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$349/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 6 -->
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Penthouse">
+                    <div class="room-info">
+                        <h3>Penthouse</h3>
+                        <p>Our most exclusive accommodation with private terrace and jacuzzi.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-ruler-combined"></i> 120 m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 Adults</span>
+                        </div>
+                        <div class="room-price">
+                            <span>$899/night</span>
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <p class="section-subtitle">Explore our facilities and beautiful spaces</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hotel Pool">
+                    <div class="gallery-overlay">
+                        <p>Infinity Pool</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Restaurant">
+                    <div class="gallery-overlay">
+                        <p>Fine Dining</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Spa">
+                    <div class="gallery-overlay">
+                        <p>Luxury Spa</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bar">
+                    <div class="gallery-overlay">
+                        <p>Sky Bar</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lobby">
+                    <div class="gallery-overlay">
+                        <p>Grand Lobby</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gym">
+                    <div class="gallery-overlay">
+                        <p>Fitness Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section id="nearby" class="nearby">
+        <div class="container">
+            <h2>Nearby Attractions</h2>
+            <p class="section-subtitle">Explore the best our city has to offer</p>
+            
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="City Center">
+                    <div class="attraction-info">
+                        <h3>City Center</h3>
+                        <p>5 min walk</p>
+                        <p>Shopping, dining and entertainment hub</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Museum">
+                    <div class="attraction-info">
+                        <h3>National Museum</h3>
+                        <p>10 min drive</p>
+                        <p>Explore our country's rich history</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Beach">
+                    <div class="attraction-info">
+                        <h3>Sandy Beach</h3>
+                        <p>15 min drive</p>
+                        <p>Relax on our beautiful coastline</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Park">
+                    <div class="attraction-info">
+                        <h3>Central Park</h3>
+                        <p>8 min walk</p>
+                        <p>Beautiful green space in the city</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2>Our Location</h2>
+            <p class="section-subtitle">Find us in the heart of the city</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2153735103226!2d-73.98784492423956!3d40.75798597138948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1689876423581!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="location-info">
+                <div class="address">
+                    <h3>Address</h3>
+                    <p>123 Luxury Avenue</p>
+                    <p>City Center, 10001</p>
+                    <p>Metropolis</p>
+                </div>
+                <div class="transport">
+                    <h3>How to reach us</h3>
+                    <p><i class="fas fa-subway"></i> Metro: City Center Station (Line 1, 2, 3)</p>
+                    <p><i class="fas fa-bus"></i> Bus: Lines 10, 20, 30 (Stop: Luxury Ave)</p>
+                    <p><i class="fas fa-plane"></i> Airport: 25km (30 min by taxi)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book Your Stay</h2>
+            <p class="section-subtitle">Secure your luxury experience today</p>
+            
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3>Best Rate Guarantee</h3>
+                    <p>We guarantee you'll find the best rates when you book directly with us. If you find a lower rate elsewhere, we'll match it plus give you an additional 10% off.</p>
+                    
+                    <div class="benefits">
+                        <h4>Booking Benefits:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Free room upgrade (when available)</li>
+                            <li><i class="fas fa-check"></i> Early check-in/late check-out</li>
+                            <li><i class="fas fa-check"></i> Welcome drink upon arrival</li>
+                            <li><i class="fas fa-check"></i> Flexible cancellation policy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <h3>Check Availability</h3>
+                    <form id="availability-form">
+                        <div class="form-group">
+                            <label for="check-in">Check In</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Check Out</label>
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" name="guests">
+                                <option value="1">1 Adult</option>
+                                <option value="2" selected>2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4 Adults</option>
+                                <option value="family">Family (2+2)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-type">Room Type</label>
+                            <select id="room-type" name="room-type">
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="executive">Executive Suite</option>
+                                <option value="presidential">Presidential Suite</option>
+                                <option value="family">Family Room</option>
+                                <option value="honeymoon">Honeymoon Suite</option>
+                                <option value="penthouse">Penthouse</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Check Availability</button>
+                    </form>
+                    
+                    <div class="booking-com">
+                        <p>Or book through our partner:</p>
+                        <a href="https://www.booking.com" target="_blank" class="booking-com-btn">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/bookingcom-285631.png" alt="Booking.com">
+                            <span>Book on Booking.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Guest Reviews</h2>
+            <p class="section-subtitle">What our guests say about us</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"Absolutely stunning hotel with exceptional service. The room was spacious and luxurious, and the staff went above and beyond to make our stay memorable."</p>
+                    <p class="author">- Sarah Johnson, UK</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"The best hotel experience we've ever had. The attention to detail is remarkable, and the location is perfect for exploring the city."</p>
+                    <p class="author">- Michael Chen, USA</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"Wonderful stay with my family. The kids loved the pool and the staff was so accommodating. We'll definitely be back!"</p>
+                    <p class="author">- The Rodriguez Family, Spain</p>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for special offers and updates</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Grand Horizon</h3>
+                    <p>Luxury hotel in the heart of the city offering unparalleled comfort, exceptional service, and memorable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#nearby">Nearby Attractions</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City Center, 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@grandhorizon.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Awards</h3>
+                    <div class="awards">
+                        <img src="https://via.placeholder.com/80x60" alt="Luxury Travel Award">
+                        <img src="https://via.placeholder.com/80x60" alt="Best Hotel Award">
+                        <img src="https://via.placeholder.com/80x60" alt="5 Star Rating">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Grand Horizon Hotel. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
