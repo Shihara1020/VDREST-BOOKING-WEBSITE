@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Horizon Hotel</title>
+    <title>VD REST Hotel - Luxury Accommodation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <h1>Grand Horizon</h1>
-                <p>Hotel & Spa</p>
+                <h1>VD REST</h1>
+                <p>Hotel & Resort</p>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#dining">Dining</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#nearby">Nearby</a></li>
+                <li><a href="#nearby">Attractions</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#booking" class="book-now">Book Now</a></li>
             </ul>
@@ -33,19 +36,43 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Luxury Redefined</h1>
-            <p>Experience unparalleled comfort in the heart of the city</p>
-            <a href="#booking" class="btn">Book Your Stay</a>
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-up" data-aos-delay="100">Luxury Redefined</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Experience unparalleled comfort in the heart of Gampola</p>
+                        <a href="#booking" class="btn" data-aos="fade-up" data-aos-delay="300">Book Your Stay</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide-2">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-up" data-aos-delay="100">Escape to Paradise</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Where every stay becomes a cherished memory</p>
+                        <a href="#rooms" class="btn" data-aos="fade-up" data-aos-delay="300">Explore Rooms</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide-3">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-up" data-aos-delay="100">Culinary Excellence</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Savor our award-winning dining experiences</p>
+                        <a href="#dining" class="btn" data-aos="fade-up" data-aos-delay="300">Discover Dining</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <div class="about-content">
-                <h2>Welcome to Grand Horizon</h2>
-                <p>Established in 2005, Grand Horizon Hotel has been providing exceptional hospitality services to travelers from around the world. Our prime location, luxurious amenities, and dedicated staff ensure an unforgettable stay.</p>
+            <div class="about-content" data-aos="fade-right">
+                <h2>Welcome to VD REST</h2>
+                <p>Established in 2005, VD REST Hotel has been providing exceptional hospitality services to travelers from around the world. Our prime location in Gampola, luxurious amenities, and dedicated staff ensure an unforgettable stay.</p>
                 <div class="features">
                     <div class="feature">
                         <i class="fas fa-wifi"></i>
@@ -60,13 +87,44 @@
                         <p>Fine Dining</p>
                     </div>
                     <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <p>Free Parking</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-snowflake"></i>
+                        <p>AC Rooms</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-paw"></i>
+                        <p>Pets Allowed</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-fire"></i>
+                        <p>BBQ Facilities</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-child"></i>
+                        <p>Play Area</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bath"></i>
+                        <p>Hot Water</p>
+                    </div>
+                    <div class="feature">
                         <i class="fas fa-spa"></i>
                         <p>Spa Services</p>
                     </div>
                 </div>
+                <a href="#rooms" class="btn btn-outline">Explore Our Rooms</a>
             </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hotel Lobby">
+            <div class="about-image" data-aos="fade-left">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby">
+                </div>
+                <div class="experience-badge">
+                    <span>15+</span>
+                    <p>Years of Excellence</p>
+                </div>
             </div>
         </div>
     </section>
@@ -74,13 +132,21 @@
     <!-- Rooms Section -->
     <section id="rooms" class="rooms">
         <div class="container">
-            <h2>Our Rooms & Suites</h2>
-            <p class="section-subtitle">Choose from our variety of luxurious accommodations</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Rooms & Suites</h2>
+                <p class="section-subtitle">Choose from our variety of luxurious accommodations</p>
+            </div>
             
             <div class="room-grid">
                 <!-- Room 1 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deluxe Room">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Deluxe Room">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Deluxe Room</h3>
                         <p>Spacious room with city view, king-size bed and modern amenities.</p>
@@ -90,15 +156,27 @@
                             <span><i class="fas fa-user-friends"></i> 2 Adults</span>
                         </div>
                         <div class="room-price">
-                            <span>$199/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$199<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Room 2 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1566669437685-5f6f6a5e1b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Executive Suite">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1566669437685-5f6f6a5e1b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Executive Suite">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Executive Suite</h3>
                         <p>Luxurious suite with separate living area and premium services.</p>
@@ -108,15 +186,27 @@
                             <span><i class="fas fa-user-friends"></i> 2 Adults</span>
                         </div>
                         <div class="room-price">
-                            <span>$299/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$299<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Room 3 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1582719471381-97122e8e9c26?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Presidential Suite">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719471381-97122e8e9c26?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Presidential Suite">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Presidential Suite</h3>
                         <p>The ultimate in luxury with panoramic views and butler service.</p>
@@ -126,33 +216,57 @@
                             <span><i class="fas fa-user-friends"></i> 2 Adults</span>
                         </div>
                         <div class="room-price">
-                            <span>$499/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$499<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Room 4 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Family Room">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Family Room">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Family Room</h3>
                         <p>Spacious accommodation perfect for families with children.</p>
                         <div class="room-features">
                             <span><i class="fas fa-bed"></i> 2 Queen Beds</span>
                             <span><i class="fas fa-ruler-combined"></i> 45 m²</span>
-                            <span><i class="fas fa-user-friends"></i> 2 Adults + 2 Children</span>
+                            <span><i class="fas fa-user-friends"></i> 2+2</span>
                         </div>
                         <div class="room-price">
-                            <span>$249/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$249<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Room 5 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Honeymoon Suite">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Honeymoon Suite">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Honeymoon Suite</h3>
                         <p>Romantic getaway with special amenities for couples.</p>
@@ -162,15 +276,27 @@
                             <span><i class="fas fa-user-friends"></i> 2 Adults</span>
                         </div>
                         <div class="room-price">
-                            <span>$349/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$349<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Room 6 -->
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Penthouse">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Penthouse">
+                        <div class="room-overlay">
+                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
                     <div class="room-info">
                         <h3>Penthouse</h3>
                         <p>Our most exclusive accommodation with private terrace and jacuzzi.</p>
@@ -180,10 +306,140 @@
                             <span><i class="fas fa-user-friends"></i> 2 Adults</span>
                         </div>
                         <div class="room-price">
-                            <span>$899/night</span>
-                            <a href="#booking" class="btn btn-small">Book Now</a>
+                            <span>$899<small>/night</small></span>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="view-all" data-aos="fade-up">
+                <a href="#rooms" class="btn btn-outline">View All Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section id="dining" class="dining">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Dining Experiences</h2>
+                <p class="section-subtitle">Savor exquisite culinary creations</p>
+            </div>
+            
+            <div class="dining-grid">
+                <div class="dining-card" data-aos="fade-right">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Main Restaurant">
+                    </div>
+                    <div class="dining-info">
+                        <h3>Horizon Restaurant</h3>
+                        <p>Our signature restaurant offering international cuisine with locally sourced ingredients. Open for breakfast, lunch, and dinner.</p>
+                        <div class="dining-details">
+                            <p><strong>Hours:</strong> 6:30 AM - 10:30 PM</p>
+                            <p><strong>Dress Code:</strong> Smart Casual</p>
+                            <p><strong>Cuisine:</strong> International</p>
+                        </div>
+                        <a href="#booking" class="btn btn-small">Make Reservation</a>
+                    </div>
+                </div>
+                
+                <div class="dining-card" data-aos="fade-left">
+                    <div class="dining-info">
+                        <h3>Sky Lounge & Bar</h3>
+                        <p>Enjoy panoramic city views with our handcrafted cocktails and light bites. Perfect for sunset watching and evening relaxation.</p>
+                        <div class="dining-details">
+                            <p><strong>Hours:</strong> 4:00 PM - 1:00 AM</p>
+                            <p><strong>Dress Code:</strong> Casual Elegant</p>
+                            <p><strong>Specialty:</strong> Signature Cocktails</p>
+                        </div>
+                        <a href="#booking" class="btn btn-small">View Menu</a>
+                    </div>
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sky Bar">
+                    </div>
+                </div>
+                
+                <div class="dining-card" data-aos="fade-right">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Poolside Dining">
+                    </div>
+                    <div class="dining-info">
+                        <h3>Poolside Grill</h3>
+                        <p>Casual dining by the infinity pool featuring fresh seafood, grilled specialties and refreshing beverages.</p>
+                        <div class="dining-details">
+                            <p><strong>Hours:</strong> 11:00 AM - 7:00 PM</p>
+                            <p><strong>Dress Code:</strong> Swimwear Cover-up</p>
+                            <p><strong>Specialty:</strong> Seafood & BBQ</p>
+                        </div>
+                        <a href="#booking" class="btn btn-small">Order Poolside</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Hotel Facilities</h2>
+                <p class="section-subtitle">World-class amenities for your comfort</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="facility-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Spa & Wellness</h3>
+                    <p>Rejuvenate with our range of massages, facials and body treatments in our tranquil spa environment.</p>
+                </div>
+                
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="facility-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness Center</h3>
+                    <p>State-of-the-art gym equipment with personal training services available upon request.</p>
+                </div>
+                
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="facility-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Infinity Pool</h3>
+                    <p>Stunning rooftop infinity pool with panoramic city views and poolside service.</p>
+                </div>
+                
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="facility-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3>Business Center</h3>
+                    <p>Fully equipped business facilities with meeting rooms and secretarial services.</p>
+                </div>
+                
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="facility-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Kids Club</h3>
+                    <p>Supervised activities and play area for our younger guests aged 4-12 years.</p>
+                </div>
+                
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="facility-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>24/7 Concierge</h3>
+                    <p>Our dedicated team is available around the clock to assist with all your needs.</p>
                 </div>
             </div>
         </div>
@@ -192,44 +448,82 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2>Photo Gallery</h2>
-            <p class="section-subtitle">Explore our facilities and beautiful spaces</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Photo Gallery</h2>
+                <p class="section-subtitle">Explore our beautiful spaces</p>
+            </div>
             
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hotel Pool">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hotel Pool">
                     <div class="gallery-overlay">
                         <p>Infinity Pool</p>
+                        <a href="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Restaurant">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurant">
                     <div class="gallery-overlay">
                         <p>Fine Dining</p>
+                        <a href="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Spa">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Spa">
                     <div class="gallery-overlay">
                         <p>Luxury Spa</p>
+                        <a href="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bar">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bar">
                     <div class="gallery-overlay">
                         <p>Sky Bar</p>
+                        <a href="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lobby">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lobby">
                     <div class="gallery-overlay">
                         <p>Grand Lobby</p>
+                        <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gym">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gym">
                     <div class="gallery-overlay">
                         <p>Fitness Center</p>
+                        <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1566669437685-5f6f6a5e1b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suite">
+                    <div class="gallery-overlay">
+                        <p>Executive Suite</p>
+                        <a href="https://images.unsplash.com/photo-1566669437685-5f6f6a5e1b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1582719471381-97122e8e9c26?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Presidential Suite">
+                    <div class="gallery-overlay">
+                        <p>Presidential Suite</p>
+                        <a href="https://images.unsplash.com/photo-1582719471381-97122e8e9c26?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="gallery-expand" data-lightbox="gallery">
+                            <i class="fas fa-expand"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -239,45 +533,76 @@
     <!-- Nearby Attractions -->
     <section id="nearby" class="nearby">
         <div class="container">
-            <h2>Nearby Attractions</h2>
-            <p class="section-subtitle">Explore the best our city has to offer</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Nearby Attractions</h2>
+                <p class="section-subtitle">Explore the best Gampola has to offer</p>
+            </div>
             
             <div class="attractions-grid">
-                <div class="attraction-card">
-                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="City Center">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="attraction-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nuwaraeliya">
+                        <div class="distance-badge">5 min walk</div>
+                    </div>
                     <div class="attraction-info">
-                        <h3>City Center</h3>
-                        <p>5 min walk</p>
-                        <p>Shopping, dining and entertainment hub</p>
+                        <h3>Nuwaraeliya</h3>
+                        <p>Shopping, dining and entertainment hub of Gampola with local markets and cultural experiences.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fas fa-clock"></i> 8AM-10PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Free Entry</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="attraction-card">
-                    <img src="https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Museum">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="attraction-image">
+                        <img src="https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kandy Town">
+                        <div class="distance-badge">10 min drive</div>
+                    </div>
                     <div class="attraction-info">
-                        <h3>National Museum</h3>
-                        <p>10 min drive</p>
-                        <p>Explore our country's rich history</p>
+                        <h3>Kandy Town</h3>
+                        <p>Explore the rich history and cultural heritage of Sri Lanka at this renowned museum complex.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fas fa-clock"></i> 9AM-5PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> $5 Entry</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="attraction-card">
-                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Beach">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="attraction-image">
+                        <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ambuluwa">
+                        <div class="distance-badge">15 min drive</div>
+                    </div>
                     <div class="attraction-info">
-                        <h3>Sandy Beach</h3>
-                        <p>15 min drive</p>
-                        <p>Relax on our beautiful coastline</p>
+                        <h3>Ambuluwa</h3>
+                        <p>Relax on the beautiful golden sands of Ambuluwa beach with crystal clear waters.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fas fa-clock"></i> Open 24/7</span>
+                            <span><i class="fas fa-ticket-alt"></i> Free Entry</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="attraction-card">
-                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Park">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="attraction-image">
+                        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Central Park">
+                        <div class="distance-badge">8 min walk</div>
+                    </div>
                     <div class="attraction-info">
                         <h3>Central Park</h3>
-                        <p>8 min walk</p>
-                        <p>Beautiful green space in the city</p>
+                        <p>Beautiful green space in the city perfect for picnics, jogging or simply relaxing.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fas fa-clock"></i> 6AM-10PM</span>
+                            <span><i class="fas fa-ticket-alt"></i> Free Entry</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="attractions-cta" data-aos="fade-up">
+                <p>Our concierge can help arrange tours and transportation to these and other attractions.</p>
+                <a href="#contact" class="btn btn-outline">Contact Concierge</a>
             </div>
         </div>
     </section>
@@ -285,25 +610,60 @@
     <!-- Location Map -->
     <section id="location" class="location">
         <div class="container">
-            <h2>Our Location</h2>
-            <p class="section-subtitle">Find us in the heart of the city</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Location</h2>
+                <p class="section-subtitle">Find us in the heart of Gampola</p>
+            </div>
             
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2153735103226!2d-73.98784492423956!3d40.75798597138948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1689876423581!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-container" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63343.31861313978!2d80.567511!3d7.130923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae371007e127fb5%3A0x7801ca7396d3e1ff!2sVD%20Rest%20Gampola!5e0!3m2!1sen!2slk!4v1743861484061!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
             <div class="location-info">
-                <div class="address">
+                <div class="info-card" data-aos="fade-right">
+                    <i class="fas fa-map-marker-alt"></i>
                     <h3>Address</h3>
-                    <p>123 Luxury Avenue</p>
-                    <p>City Center, 10001</p>
-                    <p>Metropolis</p>
+                    <p>137/A Sinhapura<br>Athgala City, Gampola</p>
                 </div>
-                <div class="transport">
-                    <h3>How to reach us</h3>
-                    <p><i class="fas fa-subway"></i> Metro: City Center Station (Line 1, 2, 3)</p>
-                    <p><i class="fas fa-bus"></i> Bus: Lines 10, 20, 30 (Stop: Luxury Ave)</p>
-                    <p><i class="fas fa-plane"></i> Airport: 25km (30 min by taxi)</p>
+                
+                <div class="info-card" data-aos="fade-up">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+94 767768689</p>
+                    <p>+94 112345678</p>
+                </div>
+                
+                <div class="info-card" data-aos="fade-left">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@vdrest.com</p>
+                    <p>reservations@vdrest.com</p>
+                </div>
+            </div>
+            
+            <div class="transport-info" data-aos="fade-up">
+                <h3>How to reach us</h3>
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <i class="fas fa-subway"></i>
+                        <h4>By Train</h4>
+                        <p>Gampola Railway Station (5 min taxi ride)</p>
+                    </div>
+                    <div class="transport-card">
+                        <i class="fas fa-bus"></i>
+                        <h4>By Bus</h4>
+                        <p>Bus stop: Athgala Junction (2 min walk)</p>
+                    </div>
+                    <div class="transport-card">
+                        <i class="fas fa-car"></i>
+                        <h4>By Car</h4>
+                        <p>Free parking available on premises</p>
+                    </div>
+                    <div class="transport-card">
+                        <i class="fas fa-plane"></i>
+                        <h4>By Air</h4>
+                        <p>Bandaranaike Airport (2.5 hour drive)</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,46 +672,81 @@
     <!-- Booking Section -->
     <section id="booking" class="booking">
         <div class="container">
-            <h2>Book Your Stay</h2>
-            <p class="section-subtitle">Secure your luxury experience today</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Book Your Stay</h2>
+                <p class="section-subtitle">Secure your luxury experience today</p>
+            </div>
             
             <div class="booking-container">
-                <div class="booking-info">
+                <div class="booking-info" data-aos="fade-right">
                     <h3>Best Rate Guarantee</h3>
                     <p>We guarantee you'll find the best rates when you book directly with us. If you find a lower rate elsewhere, we'll match it plus give you an additional 10% off.</p>
                     
                     <div class="benefits">
-                        <h4>Booking Benefits:</h4>
+                        <h4>Direct Booking Benefits:</h4>
                         <ul>
                             <li><i class="fas fa-check"></i> Free room upgrade (when available)</li>
                             <li><i class="fas fa-check"></i> Early check-in/late check-out</li>
                             <li><i class="fas fa-check"></i> Welcome drink upon arrival</li>
                             <li><i class="fas fa-check"></i> Flexible cancellation policy</li>
+                            <li><i class="fas fa-check"></i> Complimentary breakfast</li>
+                            <li><i class="fas fa-check"></i> Priority for special requests</li>
                         </ul>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <h4>Prefer to book another way?</h4>
+                        <div class="contact-options">
+                            <a href="tel:+94767768689" class="contact-option">
+                                <i class="fas fa-phone"></i>
+                                <span>Call Us</span>
+                            </a>
+                            <a href="mailto:reservations@vdrest.com" class="contact-option">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email Us</span>
+                            </a>
+                            <a href="https://wa.me/94767768689" class="contact-option">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="booking-form">
-                    <h3>Check Availability</h3>
-                    <form id="availability-form">
-                        <div class="form-group">
-                            <label for="check-in">Check In</label>
-                            <input type="date" id="check-in" name="check-in" required>
+                <div class="booking-form" data-aos="fade-left">
+                    <form id="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="check-in">Check In</label>
+                                <input type="date" id="check-in" name="check-in" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out">Check Out</label>
+                                <input type="date" id="check-out" name="check-out" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="check-out">Check Out</label>
-                            <input type="date" id="check-out" name="check-out" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">Adults</label>
+                                <select id="adults" name="adults">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="children">Children</label>
+                                <select id="children" name="children">
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="guests">Guests</label>
-                            <select id="guests" name="guests">
-                                <option value="1">1 Adult</option>
-                                <option value="2" selected>2 Adults</option>
-                                <option value="3">3 Adults</option>
-                                <option value="4">4 Adults</option>
-                                <option value="family">Family (2+2)</option>
-                            </select>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="room-type">Room Type</label>
                             <select id="room-type" name="room-type">
@@ -363,6 +758,12 @@
                                 <option value="penthouse">Penthouse</option>
                             </select>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" name="special-requests" rows="3" placeholder="Any special requirements?"></textarea>
+                        </div>
+                        
                         <button type="submit" class="btn">Check Availability</button>
                     </form>
                     
@@ -381,55 +782,86 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2>Guest Reviews</h2>
-            <p class="section-subtitle">What our guests say about us</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Guest Reviews</h2>
+                <p class="section-subtitle">What our guests say about us</p>
+            </div>
             
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonial-slider swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Absolutely stunning hotel with exceptional service. The room was spacious and luxurious, and the staff went above and beyond to make our stay memorable."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <p class="name">Sarah Johnson</p>
+                                <p class="origin">UK</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="quote">"Absolutely stunning hotel with exceptional service. The room was spacious and luxurious, and the staff went above and beyond to make our stay memorable."</p>
-                    <p class="author">- Sarah Johnson, UK</p>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"The best hotel experience we've ever had. The attention to detail is remarkable, and the location is perfect for exploring the city."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            <div class="author-info">
+                                <p class="name">Michael Chen</p>
+                                <p class="origin">USA</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="quote">"The best hotel experience we've ever had. The attention to detail is remarkable, and the location is perfect for exploring the city."</p>
-                    <p class="author">- Michael Chen, USA</p>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                    
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="quote">"Wonderful stay with my family. The kids loved the pool and the staff was so accommodating. We'll definitely be back!"</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria Rodriguez">
+                            <div class="author-info">
+                                <p class="name">Maria Rodriguez</p>
+                                <p class="origin">Spain</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="quote">"Wonderful stay with my family. The kids loved the pool and the staff was so accommodating. We'll definitely be back!"</p>
-                    <p class="author">- The Rodriguez Family, Spain</p>
-                </div>
-                
-                <div class="slider-controls">
-                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                    
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"The spa treatments were exceptional and the dining options were superb. Perfect for a romantic getaway!"</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="David Wilson">
+                            <div class="author-info">
+                                <p class="name">David Wilson</p>
+                                <p class="origin">Australia</p>
+                            </div>
+                        </div>
                     </div>
-                    <button class="next"><i class="fas fa-chevron-right"></i></button>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -437,14 +869,15 @@
     <!-- Newsletter -->
     <section class="newsletter">
         <div class="container">
-            <div class="newsletter-content">
+            <div class="newsletter-content" data-aos="fade-up">
                 <h2>Stay Updated</h2>
-                <p>Subscribe to our newsletter for special offers and updates</p>
+                <p>Subscribe to our newsletter for exclusive offers and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <p class="small-text">We respect your privacy. Unsubscribe at any time.</p>
             </div>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit" class="btn">Subscribe</button>
-            </form>
         </div>
     </section>
 
@@ -453,13 +886,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Grand Horizon</h3>
-                    <p>Luxury hotel in the heart of the city offering unparalleled comfort, exceptional service, and memorable experiences.</p>
+                    <div class="logo">
+                        <h1>VD REST</h1>
+                        <p>Hotel & Resort</p>
+                    </div>
+                    <p>Luxury hotel in the heart of Gampola offering unparalleled comfort, exceptional service, and memorable experiences.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
                 
@@ -467,7 +904,8 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#rooms">Rooms & Suites</a></li>
+                        <li><a href="#dining">Dining</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#nearby">Nearby Attractions</a></li>
                         <li><a href="#location">Location</a></li>
@@ -478,33 +916,59 @@
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City Center, 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@grandhorizon.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 137/A Sinhapura, Athgala City, Gampola</li>
+                        <li><i class="fas fa-phone"></i> +94 767768689</li>
+                        <li><i class="fas fa-envelope"></i> info@vdrest.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Reception</li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Awards</h3>
+                    <h3>Awards & Recognition</h3>
                     <div class="awards">
-                        <img src="https://via.placeholder.com/80x60" alt="Luxury Travel Award">
-                        <img src="https://via.placeholder.com/80x60" alt="Best Hotel Award">
-                        <img src="https://via.placeholder.com/80x60" alt="5 Star Rating">
+                        <img src="https://via.placeholder.com/100x60" alt="Luxury Travel Award">
+                        <img src="https://via.placeholder.com/100x60" alt="Best Hotel Award">
+                        <img src="https://via.placeholder.com/100x60" alt="5 Star Rating">
+                    </div>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Grand Horizon Hotel. All rights reserved.</p>
+                <p>&copy; 2023 VD REST Hotel & Resort. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Cookies Policy</a>
+                    <a href="#">Accessibility</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

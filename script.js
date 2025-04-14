@@ -1,146 +1,185 @@
-// Mobile Navigation
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-const nav = document.querySelector('.navbar');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    burger.classList.toggle('toggle');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        burger.classList.remove('toggle');
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li');
+    
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+        
+        // Animate Links
+        navLinksItems.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
     });
-});
-
-// Sticky Navigation
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
-// Smooth Scrolling for all links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
+    
+    // Close mobile menu when clicking on a link
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            burger.classList.remove('active');
+            navLinksItems.forEach(link => {
+                link.style.animation = '';
             });
+        });
+    });
+    
+    // Change navbar style on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
-});
-
-// Testimonial Slider
-const testimonials = document.querySelectorAll('.testimonial');
-const dots = document.querySelectorAll('.dot');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentIndex = 0;
-
-function showTestimonial(index) {
-    testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
     
-    testimonials[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentIndex = index;
-}
-
-function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-}
-
-function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-}
-
-// Dot navigation
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showTestimonial(index);
+    // Initialize Hero Slider
+    const heroSwiper = new Swiper('.hero-slider', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
-});
-
-// Button navigation
-nextBtn.addEventListener('click', nextTestimonial);
-prevBtn.addEventListener('click', prevTestimonial);
-
-// Auto-rotate testimonials
-let testimonialInterval = setInterval(nextTestimonial, 5000);
-
-// Pause on hover
-const slider = document.querySelector('.testimonial-slider');
-slider.addEventListener('mouseenter', () => {
-    clearInterval(testimonialInterval);
-});
-
-slider.addEventListener('mouseleave', () => {
-    testimonialInterval = setInterval(nextTestimonial, 5000);
-});
-
-// Booking Form
-const bookingForm = document.getElementById('availability-form');
-bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
     
-    // Get form values
-    const checkIn = document.getElementById('check-in').value;
-    const checkOut = document.getElementById('check-out').value;
-    const guests = document.getElementById('guests').value;
-    const roomType = document.getElementById('room-type').value;
-    
-    // In a real application, you would send this data to your server
-    // For this demo, we'll just show an alert
-    alert(`Checking availability for:\n\nRoom Type: ${roomType}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}\n\nThis would connect to your booking system in a real application.`);
-    
-    // Reset form
-    bookingForm.reset();
-});
-
-// Initialize date pickers with min dates
-const today = new Date().toISOString().split('T')[0];
-document.getElementById('check-in').min = today;
-
-document.getElementById('check-in').addEventListener('change', function() {
-    const checkInDate = new Date(this.value);
-    checkInDate.setDate(checkInDate.getDate() + 1);
-    const nextDay = checkInDate.toISOString().split('T')[0];
-    document.getElementById('check-out').min = nextDay;
-});
-
-// Gallery Lightbox (would be implemented in a real application)
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-        // In a real app, this would open a lightbox with the full image
-        console.log('Opening lightbox for image:', item.querySelector('img').src);
+    // Initialize Testimonial Slider
+    const testimonialSwiper = new Swiper('.testimonial-slider', {
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
-});
-
-// Form validation for newsletter
-const newsletterForm = document.querySelector('.newsletter-form');
-newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = newsletterForm.querySelector('input').value;
     
-    if (email && email.includes('@')) {
-        alert('Thank you for subscribing to our newsletter!');
-        newsletterForm.reset();
-    } else {
-        alert('Please enter a valid email address.');
+    // Back to Top Button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Form validation for booking form
+    const bookingForm = document.getElementById('reservation-form');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const checkIn = document.getElementById('check-in').value;
+            const checkOut = document.getElementById('check-out').value;
+            
+            if (!checkIn || !checkOut) {
+                alert('Please select both check-in and check-out dates');
+                return;
+            }
+            
+            // Here you would typically send the form data to your server
+            alert('Your booking request has been submitted successfully! We will contact you shortly to confirm your reservation.');
+            this.reset();
+        });
     }
+    
+    // Newsletter form
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if (emailInput.value) {
+                alert('Thank you for subscribing to our newsletter!');
+                emailInput.value = '';
+            } else {
+                alert('Please enter your email address');
+            }
+        });
+    }
+    
+    // Current year for footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Room gallery lightbox (would need lightbox library in real implementation)
+    const galleryItems = document.querySelectorAll('.gallery-expand');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would open a lightbox with the larger image
+            // For this example, we'll just show an alert
+            alert('In a real implementation, this would open a lightbox with the full-size image.');
+        });
+    });
+    
+    // View Details button for rooms
+    const viewDetailsBtns = document.querySelectorAll('.btn-view');
+    viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would show more details about the room
+            alert('In a real implementation, this would show more details about the room.');
+        });
+    });
+    
+    // Add animation to nav links on page load
+    navLinksItems.forEach((link, index) => {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    });
 });
+
+// Add CSS for navLinkFade animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+document.head.appendChild(style);
