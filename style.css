@@ -1036,7 +1036,64 @@ img {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
 
+
+.booking-wrapper {
+    max-width: 440px;
+    margin: 40px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 113, 194, 0.25);
+}
+
+.booking-header {
+    background-color: #003580;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
 .booking-com {
+    background: linear-gradient(135deg, #e0f0ff, #ffffff);
+    border-top: none;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-com p {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.booking-com-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0071c2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking-com-btn:hover {
+    background-color: #005999;
+    transform: scale(1.05);
+}
+
+.booking-com-btn img {
+    height: 26px;
+    margin-right: 10px;
+}
+
+/* .booking-com {
     background: linear-gradient(135deg, #e0f0ff, #ffffff);
     border: 2px solid #0071c2;
     border-radius: 16px;
@@ -1081,7 +1138,7 @@ img {
 .booking-com-btn img {
     height: 26px;
     margin-right: 10px;
-}
+} */
 
 
 
