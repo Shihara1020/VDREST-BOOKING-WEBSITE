@@ -130,7 +130,7 @@ img {
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    /* padding: 15px 0; */
+    padding: 15px 0; 
 }
 
 .header.scrolled {
@@ -214,7 +214,7 @@ img {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: var(--white);
+    background-color: var(--primary-color);
     margin: 5px;
     transition: var(--transition);
 }
