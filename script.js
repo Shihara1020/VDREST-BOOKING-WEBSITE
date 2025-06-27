@@ -102,24 +102,110 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form validation for booking form
-    const bookingForm = document.getElementById('reservation-form');
+    // Enhanced Booking Form Submission
+    const bookingForm = document.getElementById('bookingForm');
+    const bookingModal = document.getElementById('bookingModal');
+    const closeModal = document.querySelector('.close-modal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const checkIn = document.getElementById('check-in').value;
-            const checkOut = document.getElementById('check-out').value;
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
             
-            if (!checkIn || !checkOut) {
-                alert('Please select both check-in and check-out dates');
-                return;
-            }
+            // Get form data
+            const templateParams = {
+                to_name: 'VD Rest Hotel',
+                name: this.fullName.value,
+                email: this.email.value,
+                phone: this.phone.value,
+                roomType: this.roomType.value,
+                adults: this.adults.value,
+                children: this.children.value,
+                checkIn: this.checkIn.value,
+                checkOut: this.checkOut.value,
+                country: this.country.value,
+                specialRequests: this.specialRequests.value || 'None'
+            };
             
-            // Here you would typically send the form data to your server
-            alert('Your booking request has been submitted successfully! We will contact you shortly to confirm your reservation.');
-            this.reset();
+            // Send email using EmailJS
+            emailjs.send('service_rgz1q29', 'template_pgkcr44', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success modal if it exists
+                    if (bookingModal) {
+                        bookingModal.style.display = 'flex';
+                    } else {
+                        alert('Thank you for your booking request! We will contact you shortly to confirm your reservation.');
+                    }
+                    
+                    // Reset form
+                    bookingForm.reset();
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                })
+                .catch(function(error) {
+                    console.error('EmailJS Error:', error);
+                    
+                    // Show user-friendly error message
+                    alert('Failed to send booking request. Please try again later or contact us directly.');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
         });
+    }
+    
+    // Close modal if elements exist
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            bookingModal.style.display = 'none';
+        });
+    }
+    
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', function() {
+            bookingModal.style.display = 'none';
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (bookingModal) {
+        window.addEventListener('click', function(e) {
+            if (e.target === bookingModal) {
+                bookingModal.style.display = 'none';
+            }
+        });
+    }
+    
+    // Set minimum date for check-in (today)
+    const today = new Date().toISOString().split('T')[0];
+    const checkInInput = document.getElementById('checkIn');
+    const checkOutInput = document.getElementById('checkOut');
+    
+    if (checkInInput) {
+        checkInInput.min = today;
+        
+        // Update check-out min date when check-in date changes
+        checkInInput.addEventListener('change', function() {
+            if (checkOutInput) {
+                checkOutInput.min = this.value;
+            }
+        });
+    }
+    
+    // Initialize check-out min date if check-in is already set
+    if (checkInInput && checkInInput.value && checkOutInput) {
+        checkOutInput.min = checkInInput.value;
     }
     
     // Newsletter form
@@ -139,7 +225,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Current year for footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
     
     // Room gallery lightbox (would need lightbox library in real implementation)
     const galleryItems = document.querySelectorAll('.gallery-expand');

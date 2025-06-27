@@ -8,9 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("zkshUe3HaK3yMj48u"); 
+        })();
+    </script>
 </head>
 <body>
-    <!-- Navigation Bar -->
+
+    <!-- 1.Naviagtion Bar -->
+    <!-- 2.Hero Section -->
+    <!-- 3.About Section -->
+    <!-- 4.Rooms Section -->
+    <!-- 5.Dining Section -->
+    <!-- 6.Facilities Section -->
+    <!-- 7.Gallery Section -->
+    <!-- 8.Nearby Attractions -->
+    <!-- 9.Location Map -->
+    <!-- 10.Booking Section -->
+    <!-- 11.Testimonials -->
+
+
+
+
+    <!-- 1. Navigation Bar -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -34,27 +56,32 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+
+
+
+
+
+    <!-- 2.Hero Section -->
     <section id="home" class="hero">
         <div class="hero-slider swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide-1">
                     <div class="hero-content">
-                        <h1 data-aos="fade-up" data-aos-delay="100">Luxury Redefined</h1>
+                        <h1 data-aos="fade-up" data-aos-delay="100" data-text="Luxury Redefined">Luxury Redefined</h1>
                         <p data-aos="fade-up" data-aos-delay="200">Experience unparalleled comfort in the heart of Gampola</p>
                         <a href="#booking" class="btn" data-aos="fade-up" data-aos-delay="300">Book Your Stay</a>
                     </div>
                 </div>
                 <div class="swiper-slide slide-2">
                     <div class="hero-content">
-                        <h1 data-aos="fade-up" data-aos-delay="100">Escape to Paradise</h1>
+                        <h1 data-aos="fade-up" data-aos-delay="100" data-text="Escape to Paradise">Escape to Paradise</h1>
                         <p data-aos="fade-up" data-aos-delay="200">Where every stay becomes a cherished memory</p>
                         <a href="#rooms" class="btn" data-aos="fade-up" data-aos-delay="300">Explore Rooms</a>
                     </div>
                 </div>
                 <div class="swiper-slide slide-3">
                     <div class="hero-content">
-                        <h1 data-aos="fade-up" data-aos-delay="100">Culinary Excellence</h1>
+                        <h1 data-aos="fade-up" data-aos-delay="100" data-text="Culinary Excellence">Culinary Excellence</h1>
                         <p data-aos="fade-up" data-aos-delay="200">Savor our award-winning dining experiences</p>
                         <a href="#dining" class="btn" data-aos="fade-up" data-aos-delay="300">Discover Dining</a>
                     </div>
@@ -67,7 +94,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
+
+
+
+
+
+    <!-- 3.About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content" data-aos="fade-right">
@@ -78,10 +110,6 @@
                         <i class="fas fa-wifi"></i>
                         <p>Free WiFi</p>
                     </div>
-                    <!-- <div class="feature">
-                        <i class="fas fa-swimming-pool"></i>
-                        <p>Infinity Pool</p>
-                    </div> -->
                     <div class="feature">
                         <i class="fas fa-utensils"></i>
                         <p>Fine Dining</p>
@@ -110,10 +138,6 @@
                         <i class="fas fa-bath"></i>
                         <p>Hot Water</p>
                     </div>
-                    <!-- <div class="feature">
-                        <i class="fas fa-spa"></i>
-                        <p>Spa Services</p>
-                    </div> -->
                 </div>
                 <a href="#rooms" class="btn btn-outline">Explore Our Rooms</a>
             </div>
@@ -121,15 +145,21 @@
                 <div class="image-frame">
                     <img src="img/MainVD.JPG" alt="Hotel Lobby">
                 </div>
-                <div class="experience-badge">
-                    <span>1+</span>
-                    <p>Years of Excellence</p>
+                <div class="hotel-logo-round">
+                    <img src="img/logo2.jpg" alt="VD REST Hotel Logo">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rooms Section -->
+
+
+
+
+
+
+
+    <!-- 4.Rooms Section -->
     <section id="rooms" class="rooms">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -144,7 +174,6 @@
                         <img src="img/room1.jpg" alt="Deluxe Room">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -174,7 +203,6 @@
                         <img src="img/VD3.jpg" alt="Executive Suite">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -204,7 +232,6 @@
                         <img src="img/VD2.jpg" alt="Presidential Suite">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -234,7 +261,6 @@
                         <img src="img/VD1.jpg" alt="Family Room">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -264,7 +290,6 @@
                         <img src="img/room5.jpg" alt="Honeymoon Suite">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -294,7 +319,6 @@
                         <img src="img/room6.jpg" alt="Penthouse">
                         <div class="room-overlay">
                             <a href="#booking" class="btn btn-small">Book Now</a>
-                            <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
                     <div class="room-info">
@@ -325,7 +349,14 @@
         </div>
     </section>
 
-    <!-- Dining Section -->
+
+
+
+
+
+
+
+    <!-- 5.Dining Section -->
     <section id="dining" class="dining">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -385,7 +416,13 @@
         </div>
     </section>
 
-    <!-- Facilities Section -->
+
+
+
+
+
+
+    <!-- 6.Facilities Section -->
     <section class="facilities">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -445,7 +482,12 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+
+
+
+
+
+    <!-- 7.Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -530,7 +572,11 @@
         </div>
     </section>
 
-    <!-- Nearby Attractions -->
+
+
+
+
+    <!-- 8.Nearby Attractions -->
     <section id="nearby" class="nearby">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -622,7 +668,12 @@
         </div>
     </section>
 
-    <!-- Location Map -->
+
+
+
+
+
+    <!-- 9.Location Map -->
     <section id="location" class="location">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -680,7 +731,12 @@
         </div>
     </section>
 
-    <!-- Booking Section -->
+
+
+
+
+
+    <!-- 10.Booking Section -->
     <section id="booking" class="booking">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -725,13 +781,124 @@
                 </div>
                 
                 <div class="booking-form" data-aos="fade-left">
-                    <div class="booking-wrapper">
-                        <div class="booking-header">
-                            <span>BOOKING.COM PARTNER</span>
+                    <!-- Direct Booking Form -->
+                    <div class="direct-booking-form">
+                        <div class="form-header">
+                            <h3><i class="fas fa-calendar-check"></i> Direct Booking</h3>
+                            <p>Get the best rates and exclusive perks</p>
                         </div>
-                        <div class="booking-com">
+
+                        <form id="bookingForm">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="checkIn">
+                                        <i class="fas fa-calendar-alt"></i> Check-in Date
+                                    </label>
+                                    <input type="date" id="checkIn" name="checkIn" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="checkOut">
+                                        <i class="fas fa-calendar-alt"></i> Check-out Date
+                                    </label>
+                                    <input type="date" id="checkOut" name="checkOut" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="roomType">
+                                        <i class="fas fa-bed"></i> Room Type
+                                    </label>
+                                    <select id="roomType" name="roomType" required>
+                                        <option value="">Select Room Type</option>
+                                        <option value="standard">Standard Room</option>
+                                        <option value="deluxe">Deluxe Room</option>
+                                        <option value="suite">Executive Suite</option>
+                                        <option value="presidential">Presidential Suite</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fas fa-users"></i> Guests
+                                    </label>
+                                    <div class="guest-selector">
+                                        <div class="guest-input">
+                                            <label for="adults">Adults:</label>
+                                            <input type="number" id="adults" name="adults" min="1" max="4" value="2">
+                                        </div>
+                                        <div class="guest-input">
+                                            <label for="children">Children:</label>
+                                            <input type="number" id="children" name="children" min="0" max="3" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fullName">
+                                        <i class="fas fa-user"></i> Full Name
+                                    </label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i> Email Address
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i> Phone Number
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+94 XXX XXX XXX" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="country">
+                                        <i class="fas fa-globe"></i> Country
+                                    </label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="special-requests">
+                                <div class="form-group full-width">
+                                    <label for="specialRequests">
+                                        <i class="fas fa-comment"></i> Special Requests (Optional)
+                                    </label>
+                                    <textarea id="specialRequests" name="specialRequests" placeholder="Any special requests or requirements? (e.g., dietary restrictions, accessibility needs, celebration arrangements)"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Booking Request
+                            </button>
+
+                            <p class="form-note">
+                                * This form sends a booking inquiry. We'll contact you within 24 hours to confirm availability and finalize your reservation.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Compact Booking.com Section -->
+                    <div class="booking-com-wrapper">
+                        <div class="booking-com-compact">
                             <p>Or book through our partner:</p>
-                            <a href="https://www.booking.com/hotel/lk/vd-rest-gampola.en-gb.html" target="_blank" class="booking-com-btn">
+                            <a href="https://www.booking.com/hotel/lk/vd-rest-gampola.en-gb.html" target="_blank" class="booking-com-btn-compact">
                                 <img src="img/book1.png" alt="Booking.com">
                                 <span>Book on Booking.com</span>
                             </a>
@@ -742,7 +909,13 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+
+
+
+
+
+
+    <!-- 11.Testimonials -->
     <section class="testimonials">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -826,6 +999,15 @@
     </section>
 
 
+
+
+
+
+
+
+
+
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -882,10 +1064,40 @@
         </div>
     </footer>
 
+
+
+
+
+
+
+
+
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
+
+
+    <!-- Booking Success Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle"></i>
+                <h3>Booking Successful!</h3>
+                <p>Thank you for your reservation. We've sent a confirmation to your email.</p>
+                <button class="btn" id="modalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
