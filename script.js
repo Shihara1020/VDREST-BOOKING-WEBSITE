@@ -231,25 +231,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Room gallery lightbox (would need lightbox library in real implementation)
-    const galleryItems = document.querySelectorAll('.gallery-expand');
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would open a lightbox with the larger image
-            // For this example, we'll just show an alert
-            alert('In a real implementation, this would open a lightbox with the full-size image.');
-        });
-    });
+    // const galleryItems = document.querySelectorAll('.gallery-expand');
+    // galleryItems.forEach(item => {
+    //     item.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //     });
+    // });
     
     // View Details button for rooms
-    const viewDetailsBtns = document.querySelectorAll('.btn-view');
-    viewDetailsBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would show more details about the room
-            alert('In a real implementation, this would show more details about the room.');
-        });
-    });
+    // const viewDetailsBtns = document.querySelectorAll('.btn-view');
+    // viewDetailsBtns.forEach(btn => {
+    //     btn.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         // In a real implementation, this would show more details about the room
+    //         alert('In a real implementation, this would show more details about the room.');
+    //     });
+    // });
     
     // Add animation to nav links on page load
     navLinksItems.forEach((link, index) => {
