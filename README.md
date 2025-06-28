@@ -2,6 +2,9 @@
 
 A modern, luxury hotel website showcasing premium accommodations and services in Gampola, Sri Lanka. Built with advanced CSS animations, responsive design, and elegant user interface.
 
+## 🔗 Live Demo
+**[View Live Website](https://shihara1020.github.io/VDREST-BOOKING-WEBSITE/main.html)**
+
 ## 🌟 Features
 
 ### ✨ **Modern Design**
