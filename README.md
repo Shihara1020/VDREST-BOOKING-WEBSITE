@@ -1,1 +1,1 @@
-link - https://shihara1020.github.io/BOOKING-WEB/main.html
+link - https://shihara1020.github.io/VDREST-BOOKING-WEBSITE/main.html
