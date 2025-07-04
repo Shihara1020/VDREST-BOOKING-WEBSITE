@@ -1,0 +1,9 @@
+/* Specific styling for Penthouse room image */
+.penthouse-image {
+    object-position: center top !important;
+    transform: translateY(-20px);
+}
+
+.room-card:hover .penthouse-image {
+    transform: scale(1.1) translateY(-15px) !important;
+}

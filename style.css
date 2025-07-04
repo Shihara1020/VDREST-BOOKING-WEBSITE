@@ -584,17 +584,17 @@ img {
 }
 
 .slide-1 {
-    background-image: url('img/banner.jpg');
+    background-image: url('vdrest/slide1.jpg');
     background-attachment: fixed;
 }
 
 .slide-2 {
-    background-image: url('img/banner2.jpg');
+    background-image: url('img/slide8.jpg');
     background-attachment: fixed;
 }
 
 .slide-3 {
-    background-image: url('img/banner3.jpg');
+    background-image: url('img/slide4.jpg');
     background-attachment: fixed;
 }
 
