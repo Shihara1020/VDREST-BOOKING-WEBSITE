@@ -1,85 +1,9 @@
-# VD REST Hotel Website# VD REST Hotel Website# VD## 📖 About
+# VD REST Hotel Website
 
+A modern, luxury hotel website showcasing premium accommodations and services in Gampola, Sri Lanka. Built with advanced CSS animations, responsive design, and elegant user interface.
 
-
-A modern hotel booking website for VD REST Guesthouse in Gampola, Sri Lanka.
-
-
-
-## 🔗 Live DemoA modern, luxury hotel website showcasing premium accommodations and services in Gampola, Sri Lanka. Built with advanced CSS animations, responsive design, and elegant user interface.**VD REST Guesthouse & Resort** - A modern hotel booking website showcasing premium accommodations in Gampola, Sri Lanka. Experience warm hospitality and comfort with our elegant web platform featuring luxury design, interactive galleries, and seamless booking experience.
-
+## 🔗 Live Demo
 **[View Live Website](http://vdrest.lk/)**
-
-
-
-## Features
-
-- Responsive design for all devices## 🔗 Live DemoThis project demonstrates advanced web development techniques with responsive design, smooth animations, and user-friendly interface perfect for hospitality businesses.
-
-- Room galleries and booking system
-
-- Interactive map and location details**[View Live Website](http://vdrest.lk/)**
-
-- Local attractions information
-
-- Contact forms with EmailJS## 🔗 Live Demoebsite
-
-
-
-## Technologies Used## 🌟 Features
-
-- HTML5, CSS3, JavaScript
-
-- Font Awesome iconsA modern, luxury hotel website showcasing premium accommodations and services in Gampola, Sri Lanka. Built with advanced CSS animations, responsive design, and elegant user interface.
-
-- AOS animations
-
-- Swiper slider### ✨ **Modern Design**
-
-- Google Maps integration
-
-- **Glassmorphism Effects**: Advanced backdrop blur and transparency## � About
-
-## Getting Started
-
-1. Clone the repository- **Luxury Animations**: Floating elements, shimmer effects, and gradient animations
-
-2. Open `index.html` in your browser
-
-3. For development, use a local server- **Interactive Elements**: Hover effects with 3D transformationsVD REST Guesthouse & Resort is a premium accommodation website located in the beautiful town of Gampola, Sri Lanka. This project showcases a modern, responsive hotel booking website featuring:
-
-
-
-## Contact- **Premium Color Scheme**: Gold gradient accents with dark/light themes
-
-**VD REST Guesthouse**  
-
-137/A Sinhapura, Athgala City, Gampola  - **Luxury Design** - Premium UI/UX with glassmorphism effects and smooth animations
-
-Phone: +94 767768689  
-
-Email: vdrestofficial@gmail.com### 🎭 **Sections**- **Complete Hotel Website** - All essential sections including rooms, gallery, booking, and attractions
-
-
-
----1. **Hero Section**: Animated slider with luxury hotel images- **Modern Web Technologies** - Built with HTML5, CSS3, JavaScript, and external libraries
-
-⭐ Star this repository if you found it helpful!
-2. **About Section**: Hotel information with round logo badge and image frame- **Responsive Layout** - Optimized for desktop, tablet, and mobile devices
-
-3. **Rooms & Suites**: 6 different room types with detailed amenities- **Interactive Features** - Contact forms, image galleries, and booking integration
-
-4. **Facilities**: Business center, kids club, and concierge services
-
-5. **Gallery**: Photo showcase with modern grid layoutThe website serves as both a functional hotel booking platform and a showcase of modern web development techniques.
-
-6. **Nearby Attractions**: Local tourism spots with detailed information
-
-7. **Location**: Interactive Google Maps integration## �🔗 Live Demo
-
-8. **Booking**: Direct booking form with external partner links**[View Live Website](https://shihara1020.github.io/VDREST-BOOKING-WEBSITE/main.html)**
-
-9. **Testimonials**: Customer reviews with star ratings
 
 ## 🌟 Features
 
