@@ -3,12 +3,11 @@
 A modern, luxury hotel website showcasing **premium accommodations and services** in **Gampola, Sri Lanka**.  
 Built with **advanced CSS animations**, **responsive design**, and an **elegant user interface**.  
 
----
 
 ## 🔗 Live Demo  
 👉 [View Live Website](http://vdrest.lk/) 
 
----
+
 
 ## 🌟 Features  
 
